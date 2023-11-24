@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      list-style: none;
+      width: 200px;
+      border-right: 1px solid #e1e0e0;
+      margin: 25px 0;
+    }
+    h3 {
+      margin-top: 5px;
+    }
+    ul {
+      display: flex;
+    }
+    #box {
+      width: 1000px;
+      height: 100px;
+      border: 1px solid #e1e0e0;
+      margin: auto;
+      margin-top: 50px;
+      text-align: center;
+    }
+    #main {
+      margin: auto;
+    }
+    ol {
+      width: 1000px;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <div id="box">
+      <ul>
+        <li>
+          <p>浏览量（pv）</p>
+          <h3>50</h3>
+        </li>
+
+        <li>
+          <p>访客数（UV）</p>
+          <h3>29</h3>
+        </li>
+
+        <li>
+          <p>IP数</p>
+          <h3>5</h3>
+        </li>
+
+        <li>
+          <p>跳出率</p>
+          <h3>87.5%</h3>
+        </li>
+
+        <li>
+          <p>平均访问时间</p>
+          <h3>00:04:08</h3>
+        </li>
+      </ul>
+      <div id="main" style="width: 1000px; height: 400px"></div>
+
+      <ol>
+        对比：<input type="checkbox" />
+        前一日
+        <input type="checkbox" />
+        上周同期
+      </ol>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script>
+      var myChart = echarts.init(document.getElementById("main"));
+      // 统计百分比
+      var option = {
+        tooltip: {
+          trigger: "axis",
+          axisPointer: {
+            lineStyle: {
+              color: "rgba(102,166,243,0.5)",
+            },
+          },
+        },
+        legend: {
+          data: ["浏览量"],
+
+          top: "1%",
+          left: "0",
+        },
+        grid: {
+          bottom: 50,
+          left: 70,
+          right: 50,
+        },
+
+        xAxis: {
+          axisLine: {
+            show: true,
+            lineStyle: {
+              color: "#b1aeae",
+            },
+          },
+          axisTick: {
+            show: true,
+            color: "#000",
+          },
+          axisLabel: {
+            show: true,
+            textStyle: {
+              //改变刻度字体样式
+              color: "#000",
+            },
+          },
+          data: ["0", "3", "6", "9", "12", "15", "18", "21"],
+        },
+        yAxis: {
+          max: 20,
+          splitNumber: 4,
+          axisLine: {
+            show: false,
+          },
+          axisTick: {
+            show: false,
+          },
+          splitLine: {
+            lineStyle: {
+              color: "#E2E2E5FF",
+            },
+          },
+          type: "value",
+          axisLabel: {
+            formatter: "{value} ",
+          },
+        },
+        series: [
+          {
+            name: "浏览量",
+            type: "line",
+            // smooth: true, // 设置拆线平滑
+            symbol: "circle",
+            symbolSize: 10,
+            itemStyle: {
+              normal: {
+                label: {
+                  color: "#0092f6",
+                  show: true, // 在折线拐点上显示数据
+                  formatter: function (params) {
+                    //标签内容
+                    return params.value;
+                  },
+                },
+                color: "#0092f6",
+                areaStyle: {
+                  color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [
+                    {
+                      offset: 0,
+                      color: "rgba(102,166,243,0.5)",
+                    },
+                    {
+                      offset: 1,
+                      color: "rgba(102,166,243,0.5)",
+                    },
+                  ]),
+                },
+              },
+            },
+            data: [0, 0, 0, 15, 13, 5, 4, 2, 0],
+          },
+        ],
+      };
+
+      myChart.setOption(option);
+    </script>
+  </body>
+</html>

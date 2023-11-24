@@ -2,36 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>轮播图</title>
+    <title>Swiper demo</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
     />
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="./swiper案例/swiper案例/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="../swiper-bundle.min.css"
+    />
 
     <!-- Demo styles -->
     <style>
       html,
       body {
-        height: 500px;
+        position: relative;
+        height: 100%;
       }
 
       body {
         background: #eee;
-        /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
+        color: #000;
         margin: 0;
         padding: 0;
-        background-image: url("https://www.bh3.com/_nuxt/img/wall-bg.55350b9.jpg");
-        background-repeat: no-repeat;
-        background-size: 100%;
       }
 
       .swiper {
-        width: 1300px;
+        width: 100%;
         height: 100%;
-        margin-top: 100px;
       }
 
       .swiper-slide {
@@ -61,28 +62,36 @@
         object-fit: cover;
       }
 
+      body {
+        background: #000;
+        color: #000;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       .swiper-slide {
         background-size: cover;
         background-position: center;
       }
 
       .mySwiper2 {
-        height: 100%;
-        width: 1300px;
+        height: 80%;
+        width: 100%;
       }
 
       .mySwiper {
-        width: 600px;
         height: 20%;
         box-sizing: border-box;
         padding: 10px 0;
-        position: relative;
-        top: -200px;
-        left: 330px;
       }
 
       .mySwiper .swiper-slide {
-        width: 100px;
+        width: 25%;
         height: 100%;
         opacity: 0.4;
       }
@@ -109,94 +118,96 @@
     >
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img
-            src="https://webstatic.mihoyo.com/upload/contentweb/2023/03/08/3b96c6c4f3b4d265f2ba64e053753ce6_4749531332506649085.png"
-          />
+          <img src="./images/nature-1.jpg" />
         </div>
         <div class="swiper-slide">
-          <img
-            src="https://webstatic.mihoyo.com/upload/contentweb/2022/08/12/e1711495a7b803711e0fa1907d665551_7518678854448681603.png"
-          />
+          <img src="./images/nature-2.jpg" />
         </div>
         <div class="swiper-slide">
-          <img
-            src="https://uploadstatic.mihoyo.com/contentweb/20220121/2022012116375784415.jpg"
-          />
+          <img src="./images/nature-3.jpg" />
         </div>
         <div class="swiper-slide">
-          <img
-            src="https://uploadstatic.mihoyo.com/contentweb/20210721/2021072119142826586.jpg"
-          />
+          <img src="./images/nature-4.jpg" />
         </div>
         <div class="swiper-slide">
-          <img
-            src="https://uploadstatic.mihoyo.com/contentweb/20210201/2021020114084334134.jpg"
-          />
+          <img src="./images/nature-5.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/nature-6.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/nature-7.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/nature-8.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/nature-9.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/nature-10.jpg" />
         </div>
       </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
-
-    <!--  -->
     <div thumbsSlider="" class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img
-            src="https://webstatic.mihoyo.com/upload/contentweb/2023/03/08/6945dd91b7461711a9006e794c7a28e6_850712920918882297.png"
-          />
+          <img src="./images/nature-1.jpg" />
+        </div>
+
+        <div class="swiper-slide">
+          <img src="./images/nature-2.jpg" />
         </div>
         <div class="swiper-slide">
-          <img
-            src="https://webstatic.mihoyo.com/upload/contentweb/2022/08/12/5cc9e7d9e5b59529f786801c97414e56_8642774847250475530.png"
-          />
+          <img src="./images/nature-3.jpg" />
         </div>
         <div class="swiper-slide">
-          <img
-            src="https://uploadstatic.mihoyo.com/contentweb/20220121/2022012116380715763.jpg"
-          />
+          <img src="./images/nature-4.jpg" />
         </div>
         <div class="swiper-slide">
-          <img
-            src="https://uploadstatic.mihoyo.com/contentweb/20210721/2021072119143479921.jpg"
-          />
+          <img src="./images/nature-5.jpg" />
         </div>
         <div class="swiper-slide">
-          <img
-            src="https://uploadstatic.mihoyo.com/contentweb/20210201/2021020114084526332.jpg"
-          />
+          <img src="./images/nature-6.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/nature-7.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/nature-8.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/nature-9.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/nature-10.jpg" />
         </div>
       </div>
     </div>
 
     <!-- Swiper JS -->
-    <script src="./swiper案例/swiper案例/swiper-bundle.js"></script>
+    <script src="../swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper(".mySwiper", {
         loop: true,
         spaceBetween: 10,
-        slidesPerView: 5,
+        slidesPerView: 4,
         freeMode: true,
         watchSlidesProgress: true,
       });
       var swiper2 = new Swiper(".mySwiper2", {
         loop: true,
-        thumbs: {
-          swiper: swiper,
-        },
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
+        spaceBetween: 10,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
         },
       });
     </script>
